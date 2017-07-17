@@ -3,14 +3,16 @@
 set -e
 
 DISK=""
-USERNAME="TravisYoder"
+USERNAME="TY"
 EMAIL="tyodf@allstate.com"
 
 # grab device identifier and device node
 DISK=$(diskutil info $USERNAME | grep "Part of Whole" | grep -o "disk.*")
 
 # format disk
-diskutil eraseDisk JHFS+ $USERNAME $DISK
+diskutil eraseDisk FAT32 $USERNAME $DISK
+
+sleep 5
 
 # mount disk
 diskutil mountDisk $DISK
