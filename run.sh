@@ -24,6 +24,6 @@ cp login.sh /Volumes/$USERNAME
 mkdir /Volumes/$USERNAME/.ssh
 
 # generate private/public key on disk
-ssh-keygen -f /Volumes/$USERNAME/.ssh/id_rsa -t rsa -b 4096 -C $EMAIL
+ssh-keygen -N '' -f /Volumes/$USERNAME/.ssh/id_rsa -t rsa -b 4096 -C $EMAIL
 
 # ask for password to encrypt disk
