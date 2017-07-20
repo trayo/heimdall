@@ -21,6 +21,9 @@ diskutil mountDisk $DISK
 # copy ssh-add shell script
 cp login.sh /Volumes/$USERNAME
 
+# copy unmount shell script
+cp unmount.sh /Volumes/$USERNAME
+
 # make ssh directory
 mkdir /Volumes/$USERNAME/.ssh
 
